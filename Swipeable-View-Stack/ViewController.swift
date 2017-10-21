@@ -8,18 +8,29 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SwipeableCardViewDataSource {
+
+    @IBOutlet private weak var swipeableCardView: SwipeableCardView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        swipeableCardView.dataSource = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+// MARK: - SwipeableCardViewDataSource
+
+extension ViewController {
+
+    func numberOfCards() -> Int {
+        return 3
     }
 
+    func card(forItemAtIndex index: Int) -> SwipeableCardViewCard {
+        return SwipeableCardViewCard()
+    }
 
 }
 
