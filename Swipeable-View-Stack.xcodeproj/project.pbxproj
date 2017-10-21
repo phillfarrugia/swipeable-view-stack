@@ -18,6 +18,7 @@
 		F7A3871F1F9BB8D800EF5B45 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A3871E1F9BB8D800EF5B45 /* NibView.swift */; };
 		F7A387211F9BB8FB00EF5B45 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A387201F9BB8FB00EF5B45 /* UIView+Constraints.swift */; };
 		F7A387231F9BB93400EF5B45 /* SwipeableCardViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A387221F9BB93400EF5B45 /* SwipeableCardViewDataSource.swift */; };
+		F7FC2CF71F9BC94400EEF1CE /* SwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC2CF61F9BC94400EEF1CE /* SwipeableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F7A3871E1F9BB8D800EF5B45 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		F7A387201F9BB8FB00EF5B45 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		F7A387221F9BB93400EF5B45 /* SwipeableCardViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewDataSource.swift; sourceTree = "<group>"; };
+		F7FC2CF61F9BC94400EEF1CE /* SwipeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				F7A387181F9BB80100EF5B45 /* SwipeableCardView.swift */,
 				F7A387221F9BB93400EF5B45 /* SwipeableCardViewDataSource.swift */,
 				F7A3871A1F9BB85100EF5B45 /* SwipeableCardViewCard.swift */,
+				F7FC2CF61F9BC94400EEF1CE /* SwipeableView.swift */,
 				F7A3871E1F9BB8D800EF5B45 /* NibView.swift */,
 				F7A387201F9BB8FB00EF5B45 /* UIView+Constraints.swift */,
 				F7A3871C1F9BB87900EF5B45 /* SwipeableCardViewCard.xib */,
@@ -160,6 +163,7 @@
 				F7A387191F9BB80100EF5B45 /* SwipeableCardView.swift in Sources */,
 				F7A387211F9BB8FB00EF5B45 /* UIView+Constraints.swift in Sources */,
 				F7A387071F9BB6E400EF5B45 /* AppDelegate.swift in Sources */,
+				F7FC2CF71F9BC94400EEF1CE /* SwipeableView.swift in Sources */,
 				F7A387231F9BB93400EF5B45 /* SwipeableCardViewDataSource.swift in Sources */,
 				F7A3871F1F9BB8D800EF5B45 /* NibView.swift in Sources */,
 			);

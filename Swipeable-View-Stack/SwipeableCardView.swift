@@ -44,13 +44,17 @@ class SwipeableCardView: UIView {
 
     private func addCardView(cardView: SwipeableCardViewCard, atIndex index: Int) {
         var cardViewFrame = bounds
-        cardViewFrame.size.width -= 2 * (CGFloat(index) * SwipeableCardView.horizontalInset)
-        cardViewFrame.origin.x += (CGFloat(index) * SwipeableCardView.horizontalInset)
-        cardViewFrame.origin.y += CGFloat(index) * SwipeableCardView.verticalInset
+        let horizontalInset = (CGFloat(index) * SwipeableCardView.horizontalInset)
+        let verticalInset = CGFloat(index) * SwipeableCardView.verticalInset
+
+        cardViewFrame.size.width -= 2 * horizontalInset
+        cardViewFrame.origin.x += horizontalInset
+        cardViewFrame.origin.y += verticalInset
+
         cardView.frame = cardViewFrame
         insertSubview(cardView, at: 0)
         cardViews.append(cardView)
-        cardView.backgroundColor = generateRandomColor()
+        cardView.backgroundColor = generateRandomColor() // Temporary
     }
 
     private func removeAllCardViews() {

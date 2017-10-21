@@ -11,17 +11,11 @@ import UIKit
 /// A base UIView subclass that instaniates a view
 /// from a nib file of the same class name in order to
 /// allow reusable views to be created.
-internal class NibView: UIView {
+internal protocol NibView where Self: UIView {
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        xibSetup()
-    }
+}
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        xibSetup()
-    }
+extension NibView {
 
     /// Initializes the view from a xib
     /// file and configure initial constrains.
@@ -41,5 +35,5 @@ internal class NibView: UIView {
         }
         return view
     }
-
+    
 }
