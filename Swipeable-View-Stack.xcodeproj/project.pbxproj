@@ -25,6 +25,9 @@
 		F7FC2CFD1F9C06A500EEF1CE /* CGRect+SwipeAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC2CFC1F9C06A500EEF1CE /* CGRect+SwipeAdditions.swift */; };
 		F7FC2D011F9C132F00EEF1CE /* SwipeableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC2D001F9C132F00EEF1CE /* SwipeableViewDelegate.swift */; };
 		F7FC2D031F9C144300EEF1CE /* SwipeableCardViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC2D021F9C144300EEF1CE /* SwipeableCardViewDelegate.swift */; };
+		F7FC2D051F9C355300EEF1CE /* SampleSwipeableCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC2D041F9C355300EEF1CE /* SampleSwipeableCard.swift */; };
+		F7FC2D071F9C355C00EEF1CE /* SampleSwipeableCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7FC2D061F9C355C00EEF1CE /* SampleSwipeableCard.xib */; };
+		F7FC2D091F9C38F800EEF1CE /* SampleSwipeableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC2D081F9C38F800EEF1CE /* SampleSwipeableCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		F7FC2CFC1F9C06A500EEF1CE /* CGRect+SwipeAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+SwipeAdditions.swift"; sourceTree = "<group>"; };
 		F7FC2D001F9C132F00EEF1CE /* SwipeableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableViewDelegate.swift; sourceTree = "<group>"; };
 		F7FC2D021F9C144300EEF1CE /* SwipeableCardViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewDelegate.swift; sourceTree = "<group>"; };
+		F7FC2D041F9C355300EEF1CE /* SampleSwipeableCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSwipeableCard.swift; sourceTree = "<group>"; };
+		F7FC2D061F9C355C00EEF1CE /* SampleSwipeableCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleSwipeableCard.xib; sourceTree = "<group>"; };
+		F7FC2D081F9C38F800EEF1CE /* SampleSwipeableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSwipeableCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +113,6 @@
 				F7A387181F9BB80100EF5B45 /* SwipeableCardView.swift */,
 				F7FC2D021F9C144300EEF1CE /* SwipeableCardViewDelegate.swift */,
 				F7A387221F9BB93400EF5B45 /* SwipeableCardViewDataSource.swift */,
-				F7A3871A1F9BB85100EF5B45 /* SwipeableCardViewCard.swift */,
 				F7FC2CF61F9BC94400EEF1CE /* SwipeableView.swift */,
 				F7FC2D001F9C132F00EEF1CE /* SwipeableViewDelegate.swift */,
 				F7FC2CF81F9BD6D800EEF1CE /* SwipeDirection.swift */,
@@ -115,7 +120,11 @@
 				F7FC2CFC1F9C06A500EEF1CE /* CGRect+SwipeAdditions.swift */,
 				F7A3871E1F9BB8D800EF5B45 /* NibView.swift */,
 				F7A387201F9BB8FB00EF5B45 /* UIView+Constraints.swift */,
+				F7A3871A1F9BB85100EF5B45 /* SwipeableCardViewCard.swift */,
 				F7A3871C1F9BB87900EF5B45 /* SwipeableCardViewCard.xib */,
+				F7FC2D041F9C355300EEF1CE /* SampleSwipeableCard.swift */,
+				F7FC2D061F9C355C00EEF1CE /* SampleSwipeableCard.xib */,
+				F7FC2D081F9C38F800EEF1CE /* SampleSwipeableCellViewModel.swift */,
 				F7A3870A1F9BB6E400EF5B45 /* Main.storyboard */,
 				F7A3870D1F9BB6E400EF5B45 /* Assets.xcassets */,
 				F7A3870F1F9BB6E400EF5B45 /* LaunchScreen.storyboard */,
@@ -186,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7FC2D071F9C355C00EEF1CE /* SampleSwipeableCard.xib in Resources */,
 				F7A387111F9BB6E400EF5B45 /* LaunchScreen.storyboard in Resources */,
 				F7A3871D1F9BB87900EF5B45 /* SwipeableCardViewCard.xib in Resources */,
 				F7A3870E1F9BB6E400EF5B45 /* Assets.xcassets in Resources */,
@@ -254,12 +264,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7FC2D091F9C38F800EEF1CE /* SampleSwipeableCellViewModel.swift in Sources */,
 				F7FC2CFB1F9BDB1400EEF1CE /* CGPoint+SwipeableAdditions.swift in Sources */,
 				F7A387091F9BB6E400EF5B45 /* ViewController.swift in Sources */,
 				F7FC2CFD1F9C06A500EEF1CE /* CGRect+SwipeAdditions.swift in Sources */,
 				F7A3871B1F9BB85100EF5B45 /* SwipeableCardViewCard.swift in Sources */,
 				F7FC2D031F9C144300EEF1CE /* SwipeableCardViewDelegate.swift in Sources */,
 				F7FC2D011F9C132F00EEF1CE /* SwipeableViewDelegate.swift in Sources */,
+				F7FC2D051F9C355300EEF1CE /* SampleSwipeableCard.swift in Sources */,
 				F7A387191F9BB80100EF5B45 /* SwipeableCardView.swift in Sources */,
 				F7A387211F9BB8FB00EF5B45 /* UIView+Constraints.swift in Sources */,
 				F7A387071F9BB6E400EF5B45 /* AppDelegate.swift in Sources */,

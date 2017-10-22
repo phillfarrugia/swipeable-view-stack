@@ -6,12 +6,14 @@
 //  Copyright © 2017 Phill Farrugia. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol SwipeableCardViewDataSource: class {
 
     func numberOfCards() -> Int
 
     func card(forItemAtIndex index: Int) -> SwipeableCardViewCard
+
+    func viewForEmptyCards() -> UIView?
 
 }
