@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SwipeableCardView: UIView, SwipeableViewDelegate {
+class SwipeableCardViewContainer: UIView, SwipeableViewDelegate {
 
     static let horizontalInset: CGFloat = 12.0
 
@@ -76,8 +76,8 @@ class SwipeableCardView: UIView, SwipeableViewDelegate {
 
     private func setFrame(forCardView cardView: SwipeableCardViewCard, atIndex index: Int) {
         var cardViewFrame = bounds
-        let horizontalInset = (CGFloat(index) * SwipeableCardView.horizontalInset)
-        let verticalInset = CGFloat(index) * SwipeableCardView.verticalInset
+        let horizontalInset = (CGFloat(index) * SwipeableCardViewContainer.horizontalInset)
+        let verticalInset = CGFloat(index) * SwipeableCardViewContainer.verticalInset
 
         cardViewFrame.size.width -= 2 * horizontalInset
         cardViewFrame.origin.x += horizontalInset
@@ -90,7 +90,7 @@ class SwipeableCardView: UIView, SwipeableViewDelegate {
 
 // MARK: - SwipeableViewDelegate
 
-extension SwipeableCardView {
+extension SwipeableCardViewContainer {
 
     func didTap(view: SwipeableView) {
         if let cardView = view as? SwipeableCardViewCard,
@@ -109,13 +109,15 @@ extension SwipeableCardView {
         }
         view.removeFromSuperview()
 
-        if remainingCards > SwipeableCardView.numberOfVisibleCards {
-            let newIndex = (dataSource.numberOfCards() - remainingCards) + 1
+        if remainingCards > 0 {
+            let newIndex = dataSource.numberOfCards() - remainingCards
             addCardView(cardView: dataSource.card(forItemAtIndex: newIndex), atIndex: 2)
 
             for (cardIndex, cardView) in visibleCardViews.reversed().enumerated() {
                 UIView.animate(withDuration: 0.2, animations: {
+                    cardView.center = self.center
                     self.setFrame(forCardView: cardView, atIndex: cardIndex)
+                    self.layoutIfNeeded()
                 })
             }
 

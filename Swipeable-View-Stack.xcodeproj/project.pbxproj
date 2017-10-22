@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D1DB4F6F686EE90C7F0A31C5 /* Pods_Swipeable_View_Stack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8862332D7E886ADB81FEDFB /* Pods_Swipeable_View_Stack.framework */; };
+		F7312C3F1F9C4C2D00A39DDA /* StaticShadowHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7312C3E1F9C4C2D00A39DDA /* StaticShadowHeaderView.swift */; };
+		F7312C411F9C4C3A00A39DDA /* StaticShadowHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7312C401F9C4C3A00A39DDA /* StaticShadowHeaderView.xib */; };
 		F7A387071F9BB6E400EF5B45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A387061F9BB6E400EF5B45 /* AppDelegate.swift */; };
 		F7A387091F9BB6E400EF5B45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A387081F9BB6E400EF5B45 /* ViewController.swift */; };
 		F7A3870C1F9BB6E400EF5B45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A3870A1F9BB6E400EF5B45 /* Main.storyboard */; };
 		F7A3870E1F9BB6E400EF5B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7A3870D1F9BB6E400EF5B45 /* Assets.xcassets */; };
 		F7A387111F9BB6E400EF5B45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A3870F1F9BB6E400EF5B45 /* LaunchScreen.storyboard */; };
-		F7A387191F9BB80100EF5B45 /* SwipeableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A387181F9BB80100EF5B45 /* SwipeableCardView.swift */; };
+		F7A387191F9BB80100EF5B45 /* SwipeableCardViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A387181F9BB80100EF5B45 /* SwipeableCardViewContainer.swift */; };
 		F7A3871B1F9BB85100EF5B45 /* SwipeableCardViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A3871A1F9BB85100EF5B45 /* SwipeableCardViewCard.swift */; };
 		F7A3871D1F9BB87900EF5B45 /* SwipeableCardViewCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7A3871C1F9BB87900EF5B45 /* SwipeableCardViewCard.xib */; };
 		F7A3871F1F9BB8D800EF5B45 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A3871E1F9BB8D800EF5B45 /* NibView.swift */; };
@@ -34,6 +36,8 @@
 		37304D7E784FC84C5165D0E5 /* Pods-Swipeable-View-Stack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swipeable-View-Stack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swipeable-View-Stack/Pods-Swipeable-View-Stack.debug.xcconfig"; sourceTree = "<group>"; };
 		5F8C8FF1559E3E60CA5906FD /* Pods-Swipeable-View-Stack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swipeable-View-Stack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swipeable-View-Stack/Pods-Swipeable-View-Stack.release.xcconfig"; sourceTree = "<group>"; };
 		A8862332D7E886ADB81FEDFB /* Pods_Swipeable_View_Stack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swipeable_View_Stack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7312C3E1F9C4C2D00A39DDA /* StaticShadowHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticShadowHeaderView.swift; sourceTree = "<group>"; };
+		F7312C401F9C4C3A00A39DDA /* StaticShadowHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StaticShadowHeaderView.xib; sourceTree = "<group>"; };
 		F7A387031F9BB6E400EF5B45 /* Swipeable-View-Stack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swipeable-View-Stack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A387061F9BB6E400EF5B45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7A387081F9BB6E400EF5B45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +45,7 @@
 		F7A3870D1F9BB6E400EF5B45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7A387101F9BB6E400EF5B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7A387121F9BB6E400EF5B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7A387181F9BB80100EF5B45 /* SwipeableCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardView.swift; sourceTree = "<group>"; };
+		F7A387181F9BB80100EF5B45 /* SwipeableCardViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewContainer.swift; sourceTree = "<group>"; };
 		F7A3871A1F9BB85100EF5B45 /* SwipeableCardViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewCard.swift; sourceTree = "<group>"; };
 		F7A3871C1F9BB87900EF5B45 /* SwipeableCardViewCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeableCardViewCard.xib; sourceTree = "<group>"; };
 		F7A3871E1F9BB8D800EF5B45 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
@@ -110,7 +114,7 @@
 			children = (
 				F7A387061F9BB6E400EF5B45 /* AppDelegate.swift */,
 				F7A387081F9BB6E400EF5B45 /* ViewController.swift */,
-				F7A387181F9BB80100EF5B45 /* SwipeableCardView.swift */,
+				F7A387181F9BB80100EF5B45 /* SwipeableCardViewContainer.swift */,
 				F7FC2D021F9C144300EEF1CE /* SwipeableCardViewDelegate.swift */,
 				F7A387221F9BB93400EF5B45 /* SwipeableCardViewDataSource.swift */,
 				F7FC2CF61F9BC94400EEF1CE /* SwipeableView.swift */,
@@ -125,6 +129,8 @@
 				F7FC2D041F9C355300EEF1CE /* SampleSwipeableCard.swift */,
 				F7FC2D061F9C355C00EEF1CE /* SampleSwipeableCard.xib */,
 				F7FC2D081F9C38F800EEF1CE /* SampleSwipeableCellViewModel.swift */,
+				F7312C3E1F9C4C2D00A39DDA /* StaticShadowHeaderView.swift */,
+				F7312C401F9C4C3A00A39DDA /* StaticShadowHeaderView.xib */,
 				F7A3870A1F9BB6E400EF5B45 /* Main.storyboard */,
 				F7A3870D1F9BB6E400EF5B45 /* Assets.xcassets */,
 				F7A3870F1F9BB6E400EF5B45 /* LaunchScreen.storyboard */,
@@ -200,6 +206,7 @@
 				F7A3871D1F9BB87900EF5B45 /* SwipeableCardViewCard.xib in Resources */,
 				F7A3870E1F9BB6E400EF5B45 /* Assets.xcassets in Resources */,
 				F7A3870C1F9BB6E400EF5B45 /* Main.storyboard in Resources */,
+				F7312C411F9C4C3A00A39DDA /* StaticShadowHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +279,8 @@
 				F7FC2D031F9C144300EEF1CE /* SwipeableCardViewDelegate.swift in Sources */,
 				F7FC2D011F9C132F00EEF1CE /* SwipeableViewDelegate.swift in Sources */,
 				F7FC2D051F9C355300EEF1CE /* SampleSwipeableCard.swift in Sources */,
-				F7A387191F9BB80100EF5B45 /* SwipeableCardView.swift in Sources */,
+				F7A387191F9BB80100EF5B45 /* SwipeableCardViewContainer.swift in Sources */,
+				F7312C3F1F9C4C2D00A39DDA /* StaticShadowHeaderView.swift in Sources */,
 				F7A387211F9BB8FB00EF5B45 /* UIView+Constraints.swift in Sources */,
 				F7A387071F9BB6E400EF5B45 /* AppDelegate.swift in Sources */,
 				F7FC2CF71F9BC94400EEF1CE /* SwipeableView.swift in Sources */,

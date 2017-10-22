@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StaticShadowHeaderView" customModule="Swipeable_View_Stack" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundContainerView" destination="mjb-9d-xPy" id="iDe-WS-5Io"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="382" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjb-9d-xPy">
+                    <rect key="frame" x="20" y="10" width="342" height="80"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X5g-Nn-MFI">
+                            <rect key="frame" x="15" y="14" width="312" height="52"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Sat, 21 Oct" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLY-1G-Pag">
+                                    <rect key="frame" x="20" y="0.0" width="272" height="29"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yesterday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwB-B0-kEp">
+                                    <rect key="frame" x="20" y="34" width="272" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="mLY-1G-Pag" firstAttribute="top" secondItem="X5g-Nn-MFI" secondAttribute="top" id="GjR-JT-gy5"/>
+                                <constraint firstAttribute="trailing" secondItem="zwB-B0-kEp" secondAttribute="trailing" constant="20" id="HTY-ZR-sLZ"/>
+                                <constraint firstItem="zwB-B0-kEp" firstAttribute="top" secondItem="mLY-1G-Pag" secondAttribute="bottom" constant="5" id="NFf-NL-Fvr"/>
+                                <constraint firstAttribute="trailing" secondItem="mLY-1G-Pag" secondAttribute="trailing" constant="20" id="RhS-8n-WMt"/>
+                                <constraint firstAttribute="bottom" secondItem="zwB-B0-kEp" secondAttribute="bottom" id="c7H-7s-FAf"/>
+                                <constraint firstItem="mLY-1G-Pag" firstAttribute="leading" secondItem="X5g-Nn-MFI" secondAttribute="leading" constant="20" id="gMU-Em-amW"/>
+                                <constraint firstItem="zwB-B0-kEp" firstAttribute="leading" secondItem="X5g-Nn-MFI" secondAttribute="leading" constant="20" id="tgd-HU-qx2"/>
+                            </constraints>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron" translatesAutoresizingMaskIntoConstraints="NO" id="oAM-Zv-liF">
+                            <rect key="frame" x="297" y="34" width="20" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="Loa-bA-Q08"/>
+                                <constraint firstAttribute="width" constant="20" id="MPN-ce-PiJ"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="X5g-Nn-MFI" firstAttribute="leading" secondItem="mjb-9d-xPy" secondAttribute="leading" constant="15" id="0lr-Te-7yb"/>
+                        <constraint firstItem="oAM-Zv-liF" firstAttribute="centerY" secondItem="mjb-9d-xPy" secondAttribute="centerY" id="DnL-db-MMz"/>
+                        <constraint firstItem="X5g-Nn-MFI" firstAttribute="centerY" secondItem="mjb-9d-xPy" secondAttribute="centerY" id="L3C-J4-Hvu"/>
+                        <constraint firstAttribute="trailing" secondItem="oAM-Zv-liF" secondAttribute="trailing" constant="25" id="S3B-x4-1Yf"/>
+                        <constraint firstAttribute="trailing" secondItem="X5g-Nn-MFI" secondAttribute="trailing" constant="15" id="UaV-2G-8B3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mjb-9d-xPy" secondAttribute="trailing" constant="20" id="BiY-6i-bZk"/>
+                <constraint firstItem="mjb-9d-xPy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Moq-cs-2ft"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="mjb-9d-xPy" secondAttribute="top" constant="-10" id="ZeQ-JF-WVb"/>
+                <constraint firstItem="mjb-9d-xPy" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-10" id="rcP-zZ-vRa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="59" y="60"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron" width="331" height="215"/>
+    </resources>
+</document>
