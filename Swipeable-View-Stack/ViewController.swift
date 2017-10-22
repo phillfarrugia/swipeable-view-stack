@@ -25,7 +25,7 @@ class ViewController: UIViewController, SwipeableCardViewDataSource {
 extension ViewController {
 
     func numberOfCards() -> Int {
-        return 3
+        return 10
     }
 
     func card(forItemAtIndex index: Int) -> SwipeableCardViewCard {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1DB4F6F686EE90C7F0A31C5 /* Pods_Swipeable_View_Stack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8862332D7E886ADB81FEDFB /* Pods_Swipeable_View_Stack.framework */; };
 		F7A387071F9BB6E400EF5B45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A387061F9BB6E400EF5B45 /* AppDelegate.swift */; };
 		F7A387091F9BB6E400EF5B45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A387081F9BB6E400EF5B45 /* ViewController.swift */; };
 		F7A3870C1F9BB6E400EF5B45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A3870A1F9BB6E400EF5B45 /* Main.storyboard */; };
@@ -19,9 +20,17 @@
 		F7A387211F9BB8FB00EF5B45 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A387201F9BB8FB00EF5B45 /* UIView+Constraints.swift */; };
 		F7A387231F9BB93400EF5B45 /* SwipeableCardViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A387221F9BB93400EF5B45 /* SwipeableCardViewDataSource.swift */; };
 		F7FC2CF71F9BC94400EEF1CE /* SwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC2CF61F9BC94400EEF1CE /* SwipeableView.swift */; };
+		F7FC2CF91F9BD6D800EEF1CE /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC2CF81F9BD6D800EEF1CE /* SwipeDirection.swift */; };
+		F7FC2CFB1F9BDB1400EEF1CE /* CGPoint+SwipeableAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC2CFA1F9BDB1400EEF1CE /* CGPoint+SwipeableAdditions.swift */; };
+		F7FC2CFD1F9C06A500EEF1CE /* CGRect+SwipeAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC2CFC1F9C06A500EEF1CE /* CGRect+SwipeAdditions.swift */; };
+		F7FC2D011F9C132F00EEF1CE /* SwipeableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC2D001F9C132F00EEF1CE /* SwipeableViewDelegate.swift */; };
+		F7FC2D031F9C144300EEF1CE /* SwipeableCardViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC2D021F9C144300EEF1CE /* SwipeableCardViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37304D7E784FC84C5165D0E5 /* Pods-Swipeable-View-Stack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swipeable-View-Stack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swipeable-View-Stack/Pods-Swipeable-View-Stack.debug.xcconfig"; sourceTree = "<group>"; };
+		5F8C8FF1559E3E60CA5906FD /* Pods-Swipeable-View-Stack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swipeable-View-Stack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swipeable-View-Stack/Pods-Swipeable-View-Stack.release.xcconfig"; sourceTree = "<group>"; };
+		A8862332D7E886ADB81FEDFB /* Pods_Swipeable_View_Stack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swipeable_View_Stack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A387031F9BB6E400EF5B45 /* Swipeable-View-Stack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swipeable-View-Stack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A387061F9BB6E400EF5B45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7A387081F9BB6E400EF5B45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +45,11 @@
 		F7A387201F9BB8FB00EF5B45 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		F7A387221F9BB93400EF5B45 /* SwipeableCardViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewDataSource.swift; sourceTree = "<group>"; };
 		F7FC2CF61F9BC94400EEF1CE /* SwipeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableView.swift; sourceTree = "<group>"; };
+		F7FC2CF81F9BD6D800EEF1CE /* SwipeDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
+		F7FC2CFA1F9BDB1400EEF1CE /* CGPoint+SwipeableAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+SwipeableAdditions.swift"; sourceTree = "<group>"; };
+		F7FC2CFC1F9C06A500EEF1CE /* CGRect+SwipeAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+SwipeAdditions.swift"; sourceTree = "<group>"; };
+		F7FC2D001F9C132F00EEF1CE /* SwipeableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableViewDelegate.swift; sourceTree = "<group>"; };
+		F7FC2D021F9C144300EEF1CE /* SwipeableCardViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1DB4F6F686EE90C7F0A31C5 /* Pods_Swipeable_View_Stack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF70FC3528C4AD7795EE2E29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8862332D7E886ADB81FEDFB /* Pods_Swipeable_View_Stack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB8DF363A14BCAD82E1C207B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37304D7E784FC84C5165D0E5 /* Pods-Swipeable-View-Stack.debug.xcconfig */,
+				5F8C8FF1559E3E60CA5906FD /* Pods-Swipeable-View-Stack.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F7A386FA1F9BB6E400EF5B45 = {
 			isa = PBXGroup;
 			children = (
 				F7A387051F9BB6E400EF5B45 /* Swipeable-View-Stack */,
 				F7A387041F9BB6E400EF5B45 /* Products */,
+				CB8DF363A14BCAD82E1C207B /* Pods */,
+				BF70FC3528C4AD7795EE2E29 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +105,14 @@
 				F7A387061F9BB6E400EF5B45 /* AppDelegate.swift */,
 				F7A387081F9BB6E400EF5B45 /* ViewController.swift */,
 				F7A387181F9BB80100EF5B45 /* SwipeableCardView.swift */,
+				F7FC2D021F9C144300EEF1CE /* SwipeableCardViewDelegate.swift */,
 				F7A387221F9BB93400EF5B45 /* SwipeableCardViewDataSource.swift */,
 				F7A3871A1F9BB85100EF5B45 /* SwipeableCardViewCard.swift */,
 				F7FC2CF61F9BC94400EEF1CE /* SwipeableView.swift */,
+				F7FC2D001F9C132F00EEF1CE /* SwipeableViewDelegate.swift */,
+				F7FC2CF81F9BD6D800EEF1CE /* SwipeDirection.swift */,
+				F7FC2CFA1F9BDB1400EEF1CE /* CGPoint+SwipeableAdditions.swift */,
+				F7FC2CFC1F9C06A500EEF1CE /* CGRect+SwipeAdditions.swift */,
 				F7A3871E1F9BB8D800EF5B45 /* NibView.swift */,
 				F7A387201F9BB8FB00EF5B45 /* UIView+Constraints.swift */,
 				F7A3871C1F9BB87900EF5B45 /* SwipeableCardViewCard.xib */,
@@ -92,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7A387151F9BB6E400EF5B45 /* Build configuration list for PBXNativeTarget "Swipeable-View-Stack" */;
 			buildPhases = (
+				9FB8277CA98183B02FB8BC48 /* [CP] Check Pods Manifest.lock */,
 				F7A386FF1F9BB6E400EF5B45 /* Sources */,
 				F7A387001F9BB6E400EF5B45 /* Frameworks */,
 				F7A387011F9BB6E400EF5B45 /* Resources */,
+				C8263056F3860C2CE11BE384 /* [CP] Embed Pods Frameworks */,
+				2C3A81AD511A3C84E01A2DF3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -153,17 +195,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C3A81AD511A3C84E01A2DF3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swipeable-View-Stack/Pods-Swipeable-View-Stack-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FB8277CA98183B02FB8BC48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swipeable-View-Stack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8263056F3860C2CE11BE384 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Swipeable-View-Stack/Pods-Swipeable-View-Stack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swipeable-View-Stack/Pods-Swipeable-View-Stack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F7A386FF1F9BB6E400EF5B45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7FC2CFB1F9BDB1400EEF1CE /* CGPoint+SwipeableAdditions.swift in Sources */,
 				F7A387091F9BB6E400EF5B45 /* ViewController.swift in Sources */,
+				F7FC2CFD1F9C06A500EEF1CE /* CGRect+SwipeAdditions.swift in Sources */,
 				F7A3871B1F9BB85100EF5B45 /* SwipeableCardViewCard.swift in Sources */,
+				F7FC2D031F9C144300EEF1CE /* SwipeableCardViewDelegate.swift in Sources */,
+				F7FC2D011F9C132F00EEF1CE /* SwipeableViewDelegate.swift in Sources */,
 				F7A387191F9BB80100EF5B45 /* SwipeableCardView.swift in Sources */,
 				F7A387211F9BB8FB00EF5B45 /* UIView+Constraints.swift in Sources */,
 				F7A387071F9BB6E400EF5B45 /* AppDelegate.swift in Sources */,
 				F7FC2CF71F9BC94400EEF1CE /* SwipeableView.swift in Sources */,
+				F7FC2CF91F9BD6D800EEF1CE /* SwipeDirection.swift in Sources */,
 				F7A387231F9BB93400EF5B45 /* SwipeableCardViewDataSource.swift in Sources */,
 				F7A3871F1F9BB8D800EF5B45 /* NibView.swift in Sources */,
 			);
@@ -300,6 +401,7 @@
 		};
 		F7A387161F9BB6E400EF5B45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37304D7E784FC84C5165D0E5 /* Pods-Swipeable-View-Stack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -315,6 +417,7 @@
 		};
 		F7A387171F9BB6E400EF5B45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F8C8FF1559E3E60CA5906FD /* Pods-Swipeable-View-Stack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
