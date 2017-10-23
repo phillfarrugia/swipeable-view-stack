@@ -39,6 +39,9 @@ class SwipeableCardViewContainer: UIView, SwipeableViewDelegate {
         translatesAutoresizingMaskIntoConstraints = false
     }
 
+    /// Reloads the data used to layout card views in the
+    /// card stack. Removes all existing card views and
+    /// calls the dataSource to layout new card views.
     func reloadData() {
         removeAllCardViews()
         guard let dataSource = dataSource else {
@@ -48,7 +51,7 @@ class SwipeableCardViewContainer: UIView, SwipeableViewDelegate {
         let numberOfCards = dataSource.numberOfCards()
         remainingCards = numberOfCards
 
-        for index in 0..<min(numberOfCards, 3) {
+        for index in 0..<min(numberOfCards, SwipeableCardViewContainer.numberOfVisibleCards) {
             addCardView(cardView: dataSource.card(forItemAtIndex: index), atIndex: index)
         }
 
@@ -74,6 +77,13 @@ class SwipeableCardViewContainer: UIView, SwipeableViewDelegate {
         cardViews = []
     }
 
+    /// Sets the frame of a card view provided for a given index. Applies a specific
+    /// horizontal and vertical offset relative to the index in order to create an
+    /// overlay stack effect on a series of cards.
+    ///
+    /// - Parameters:
+    ///   - cardView: card view to update frame on
+    ///   - index: index used to apply horizontal and vertical insets
     private func setFrame(forCardView cardView: SwipeableCardViewCard, atIndex index: Int) {
         var cardViewFrame = bounds
         let horizontalInset = (CGFloat(index) * SwipeableCardViewContainer.horizontalInset)
@@ -107,12 +117,21 @@ extension SwipeableCardViewContainer {
         guard let dataSource = dataSource else {
             return
         }
+
+        // Remove swiped card
         view.removeFromSuperview()
 
+        // Only add a new card if there are cards remaining
         if remainingCards > 0 {
+
+            // Calculate new card's index
             let newIndex = dataSource.numberOfCards() - remainingCards
+
+            // Add new card as Subview
             addCardView(cardView: dataSource.card(forItemAtIndex: newIndex), atIndex: 2)
 
+            // Update all existing card's frames based on new indexes, animate frame change
+            // to reveal new card from underneath the stack of existing cards.
             for (cardIndex, cardView) in visibleCardViews.reversed().enumerated() {
                 UIView.animate(withDuration: 0.2, animations: {
                     cardView.center = self.center
