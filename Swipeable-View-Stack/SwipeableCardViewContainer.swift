@@ -50,7 +50,11 @@ class SwipeableCardViewContainer: UIView, SwipeableViewDelegate {
 
         let numberOfCards = dataSource.numberOfCards()
         remainingCards = numberOfCards
-
+        
+        // force the view to update to constraints
+        // fixes the layout issues when initially loading the view
+        layoutIfNeeded()
+        
         for index in 0..<min(numberOfCards, SwipeableCardViewContainer.numberOfVisibleCards) {
             addCardView(cardView: dataSource.card(forItemAtIndex: index), atIndex: index)
         }
