@@ -164,13 +164,6 @@ class SwipeableView: UIView {
         return retPoint
     }
 
-    private func animationPointForAutoDirection(_ direction: SwipeDirection) -> CGPoint {
-        let point = direction.point
-        let animatePoint = CGPoint(x: point.x * 4, y: point.y * 4)
-        let retPoint = animatePoint.screenPointForSize(UIScreen.main.bounds.size)
-        return retPoint
-    }
-
     private func resetCardViewPosition() {
         removeAnimations()
 
@@ -213,7 +206,7 @@ class SwipeableView: UIView {
         let translationAnimation = POPBasicAnimation(propertyNamed: kPOPLayerTranslationXY)
         translationAnimation?.duration = SwipeableView.autoSwipeActionAnimationDuration
         translationAnimation?.fromValue = NSValue(cgPoint: POPLayerGetTranslationXY(layer))
-        translationAnimation?.toValue = NSValue(cgPoint: animationPointForAutoDirection(direction))
+        translationAnimation?.toValue = NSValue(cgPoint: animationPointForDirection(direction))
         translationAnimation?.completionBlock = { _, _ in
             self.removeFromSuperview()
         }
