@@ -15,4 +15,5 @@ protocol SwipeableCardViewDelegate: class {
 
     // the card was swiped away
     func didSwipe(card: SwipeableCardViewCard, direction: SwipeDirection, atIndex index: Int)
+
 }

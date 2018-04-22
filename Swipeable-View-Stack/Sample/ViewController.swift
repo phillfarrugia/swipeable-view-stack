@@ -12,12 +12,12 @@ class ViewController: UIViewController {
 
     @IBOutlet private weak var swipeableCardView: SwipeableCardViewContainer!
 
-    @IBAction func yesButton(_ sender: Any) {
-        
+    @IBAction func SwipeRightButton(_ sender: Any) {
+        swipeableCardView.autoSwipe(direction: SwipeDirection.right)
     }
     
-    @IBAction func noButton(_ sender: Any) {
-    
+    @IBAction func SwipeLeftButton(_ sender: Any) {
+        swipeableCardView.autoSwipe(direction: SwipeDirection.left)
     }
 
     override func viewDidLoad() {
@@ -47,11 +47,10 @@ extension ViewController : SwipeableCardViewDataSource {
     func viewForEmptyCards() -> UIView? {
         return nil
     }
-
 }
 
 extension ViewController : SwipeableCardViewDelegate {
-    
+
     func didSwipe(card: SwipeableCardViewCard, direction: SwipeDirection, atIndex index: Int) {
         print("Swiped Card \(index) to the \(direction)")
     }
@@ -59,6 +58,7 @@ extension ViewController : SwipeableCardViewDelegate {
     func didSelect(card: SwipeableCardViewCard, atIndex index: Int) {
         print("Selected Card \(index)")
     }
+
 }
 
 extension ViewController {
@@ -95,7 +95,9 @@ extension ViewController {
                                                   color: UIColor(red:0.83, green:0.82, blue:0.69, alpha:1.0),
                                                   image: #imageLiteral(resourceName: "clown"))
 
-        return [hamburger, panda, puppy, poop, robot, clown]
+        return [hamburger, panda, puppy, poop, robot, clown,
+                hamburger, panda, puppy, poop, robot, clown,
+                hamburger, panda, puppy, poop, robot, clown]
     }
 
 }

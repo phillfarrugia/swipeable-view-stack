@@ -30,8 +30,8 @@ class SwipeableView: UIView {
     static var animationDirectionY: CGFloat = 1.0
 
     static var swipePercentageMargin: CGFloat = 0.6
-
-    // MARK: Card Finalize Swipe Animation
+    
+    static var autoSwipeActionAnimationDuration: TimeInterval = 0.3
 
     static var finalizeSwipeActionAnimationDuration: TimeInterval = 0.8
 
@@ -54,6 +54,10 @@ class SwipeableView: UIView {
     }
 
     deinit {
+        removeGestures()
+    }
+    
+    private func removeGestures(){
         if let panGestureRecognizer = panGestureRecognizer {
             removeGestureRecognizer(panGestureRecognizer)
         }
@@ -160,6 +164,13 @@ class SwipeableView: UIView {
         return retPoint
     }
 
+    private func animationPointForAutoDirection(_ direction: SwipeDirection) -> CGPoint {
+        let point = direction.point
+        let animatePoint = CGPoint(x: point.x * 4, y: point.y * 4)
+        let retPoint = animatePoint.screenPointForSize(UIScreen.main.bounds.size)
+        return retPoint
+    }
+
     private func resetCardViewPosition() {
         removeAnimations()
 
@@ -181,7 +192,7 @@ class SwipeableView: UIView {
         resetRotationAnimation?.duration = SwipeableView.cardViewResetAnimationDuration
         layer.pop_add(resetRotationAnimation, forKey: "resetRotationAnimation")
     }
-
+    
     private func removeAnimations() {
         pop_removeAllAnimations()
         layer.pop_removeAllAnimations()
@@ -191,5 +202,22 @@ class SwipeableView: UIView {
 
     @objc private func tapRecognized(_ recognizer: UITapGestureRecognizer) {
         delegate?.didTap(view: self)
+    }
+    
+    
+    // programatically swipe the card off the screen in a certain direction
+    func autoSwipe(direction: SwipeDirection) {
+        removeAnimations()
+        removeGestures()
+        
+        let translationAnimation = POPBasicAnimation(propertyNamed: kPOPLayerTranslationXY)
+        translationAnimation?.duration = SwipeableView.autoSwipeActionAnimationDuration
+        translationAnimation?.fromValue = NSValue(cgPoint: POPLayerGetTranslationXY(layer))
+        translationAnimation?.toValue = NSValue(cgPoint: animationPointForAutoDirection(direction))
+        translationAnimation?.completionBlock = { _, _ in
+            self.removeFromSuperview()
+        }
+        layer.pop_add(translationAnimation, forKey: "swipeTranslationAnimation")
+        self.delegate?.didAutoSwipe(onView: self, direction: direction)
     }
 }

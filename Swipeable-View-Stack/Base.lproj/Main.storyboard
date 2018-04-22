@@ -41,7 +41,7 @@
                                 <rect key="frame" x="48" y="634" width="53" height="47"/>
                                 <state key="normal" title="LEFT"/>
                                 <connections>
-                                    <action selector="noButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IMI-qf-Qg1"/>
+                                    <action selector="SwipeLeftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IMI-qf-Qg1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUZ-OP-eNo">
@@ -50,7 +50,7 @@
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="yesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Kh-il-Plk"/>
+                                    <action selector="SwipeRightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Kh-il-Plk"/>
                                 </connections>
                             </button>
                         </subviews>
