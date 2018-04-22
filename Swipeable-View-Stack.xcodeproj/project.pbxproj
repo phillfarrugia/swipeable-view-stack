@@ -74,6 +74,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		753A7352208C49C20032B725 /* SwipeableCard */ = {
+			isa = PBXGroup;
+			children = (
+				F7A3871C1F9BB87900EF5B45 /* SwipeableCardViewCard.xib */,
+				F7A3871A1F9BB85100EF5B45 /* SwipeableCardViewCard.swift */,
+				F7A3871E1F9BB8D800EF5B45 /* NibView.swift */,
+				F7FC2CF61F9BC94400EEF1CE /* SwipeableView.swift */,
+				F7FC2D001F9C132F00EEF1CE /* SwipeableViewDelegate.swift */,
+			);
+			path = SwipeableCard;
+			sourceTree = "<group>";
+		};
+		753A7353208C49FA0032B725 /* SwipeableView */ = {
+			isa = PBXGroup;
+			children = (
+				753A7354208C4A050032B725 /* Utils */,
+				753A7352208C49C20032B725 /* SwipeableCard */,
+				F7A387221F9BB93400EF5B45 /* SwipeableCardViewDataSource.swift */,
+				F7FC2D021F9C144300EEF1CE /* SwipeableCardViewDelegate.swift */,
+				F7A387181F9BB80100EF5B45 /* SwipeableCardViewContainer.swift */,
+			);
+			path = SwipeableView;
+			sourceTree = "<group>";
+		};
+		753A7354208C4A050032B725 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F7FC2CF81F9BD6D800EEF1CE /* SwipeDirection.swift */,
+				F7FC2CFA1F9BDB1400EEF1CE /* CGPoint+SwipeableAdditions.swift */,
+				F7FC2CFC1F9C06A500EEF1CE /* CGRect+SwipeAdditions.swift */,
+				F7A387201F9BB8FB00EF5B45 /* UIView+Constraints.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		753A7355208C4A890032B725 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				F7A387081F9BB6E400EF5B45 /* ViewController.swift */,
+				F7FC2D041F9C355300EEF1CE /* SampleSwipeableCard.swift */,
+				F7FC2D081F9C38F800EEF1CE /* SampleSwipeableCellViewModel.swift */,
+				F7FC2D061F9C355C00EEF1CE /* SampleSwipeableCard.xib */,
+				F7312C3E1F9C4C2D00A39DDA /* StaticShadowHeaderView.swift */,
+				F7312C401F9C4C3A00A39DDA /* StaticShadowHeaderView.xib */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
 		BF70FC3528C4AD7795EE2E29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,25 +160,9 @@
 		F7A387051F9BB6E400EF5B45 /* Swipeable-View-Stack */ = {
 			isa = PBXGroup;
 			children = (
+				753A7353208C49FA0032B725 /* SwipeableView */,
+				753A7355208C4A890032B725 /* Sample */,
 				F7A387061F9BB6E400EF5B45 /* AppDelegate.swift */,
-				F7A387081F9BB6E400EF5B45 /* ViewController.swift */,
-				F7A387181F9BB80100EF5B45 /* SwipeableCardViewContainer.swift */,
-				F7FC2D021F9C144300EEF1CE /* SwipeableCardViewDelegate.swift */,
-				F7A387221F9BB93400EF5B45 /* SwipeableCardViewDataSource.swift */,
-				F7FC2CF61F9BC94400EEF1CE /* SwipeableView.swift */,
-				F7FC2D001F9C132F00EEF1CE /* SwipeableViewDelegate.swift */,
-				F7FC2CF81F9BD6D800EEF1CE /* SwipeDirection.swift */,
-				F7FC2CFA1F9BDB1400EEF1CE /* CGPoint+SwipeableAdditions.swift */,
-				F7FC2CFC1F9C06A500EEF1CE /* CGRect+SwipeAdditions.swift */,
-				F7A3871E1F9BB8D800EF5B45 /* NibView.swift */,
-				F7A387201F9BB8FB00EF5B45 /* UIView+Constraints.swift */,
-				F7A3871A1F9BB85100EF5B45 /* SwipeableCardViewCard.swift */,
-				F7A3871C1F9BB87900EF5B45 /* SwipeableCardViewCard.xib */,
-				F7FC2D041F9C355300EEF1CE /* SampleSwipeableCard.swift */,
-				F7FC2D061F9C355C00EEF1CE /* SampleSwipeableCard.xib */,
-				F7FC2D081F9C38F800EEF1CE /* SampleSwipeableCellViewModel.swift */,
-				F7312C3E1F9C4C2D00A39DDA /* StaticShadowHeaderView.swift */,
-				F7312C401F9C4C3A00A39DDA /* StaticShadowHeaderView.xib */,
 				F7A3870A1F9BB6E400EF5B45 /* Main.storyboard */,
 				F7A3870D1F9BB6E400EF5B45 /* Assets.xcassets */,
 				F7A3870F1F9BB6E400EF5B45 /* LaunchScreen.storyboard */,
