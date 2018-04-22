@@ -117,11 +117,17 @@ extension SwipeableCardViewContainer {
         // React to Swipe Began?
     }
 
-    func didEndSwipe(onView view: SwipeableView) {
+    func didEndSwipe(onView view: SwipeableView, direction: SwipeDirection) {
+        // call back for when a card is swiped away in any direction
+        if let cardView = view as? SwipeableCardViewCard,
+            let index = cardViews.index(of: cardView) {
+            delegate?.didSwipe(card: cardView, direction: direction, atIndex: index)
+        }
+        
         guard let dataSource = dataSource else {
             return
         }
-
+        
         // Remove swiped card
         view.removeFromSuperview()
 

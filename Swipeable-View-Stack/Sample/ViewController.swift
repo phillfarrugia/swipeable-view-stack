@@ -8,21 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController, SwipeableCardViewDataSource {
+class ViewController: UIViewController {
 
     @IBOutlet private weak var swipeableCardView: SwipeableCardViewContainer!
+
+    @IBAction func yesButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func noButton(_ sender: Any) {
+    
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         swipeableCardView.dataSource = self
+        swipeableCardView.delegate = self
     }
 
 }
 
 // MARK: - SwipeableCardViewDataSource
 
-extension ViewController {
+extension ViewController : SwipeableCardViewDataSource {
 
     func numberOfCards() -> Int {
         return viewModels.count
@@ -39,6 +48,17 @@ extension ViewController {
         return nil
     }
 
+}
+
+extension ViewController : SwipeableCardViewDelegate {
+    
+    func didSwipe(card: SwipeableCardViewCard, direction: SwipeDirection, atIndex index: Int) {
+        print("Swiped Card \(index) to the \(direction)")
+    }
+    
+    func didSelect(card: SwipeableCardViewCard, atIndex index: Int) {
+        print("Selected Card \(index)")
+    }
 }
 
 extension ViewController {

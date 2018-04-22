@@ -10,6 +10,9 @@ import Foundation
 
 protocol SwipeableCardViewDelegate: class {
 
+    // the card was tapped
     func didSelect(card: SwipeableCardViewCard, atIndex index: Int)
 
+    // the card was swiped away
+    func didSwipe(card: SwipeableCardViewCard, direction: SwipeDirection, atIndex index: Int)
 }

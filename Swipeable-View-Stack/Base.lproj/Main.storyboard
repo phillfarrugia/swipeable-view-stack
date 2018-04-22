@@ -37,6 +37,22 @@
                                     <constraint firstAttribute="height" constant="400" id="mdS-bL-djT"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqX-2g-SV9">
+                                <rect key="frame" x="48" y="634" width="53" height="47"/>
+                                <state key="normal" title="LEFT"/>
+                                <connections>
+                                    <action selector="noButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IMI-qf-Qg1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUZ-OP-eNo">
+                                <rect key="frame" x="274" y="634" width="53" height="47"/>
+                                <state key="normal" title="RIGHT">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="yesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Kh-il-Plk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -44,12 +60,19 @@
                             <constraint firstItem="w8K-oz-Scp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8Br-tM-Kpz"/>
                             <constraint firstItem="w8K-oz-Scp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="8vE-dw-Qgv"/>
                             <constraint firstItem="7gm-Im-TT0" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="AMa-L3-fXD"/>
+                            <constraint firstItem="XUZ-OP-eNo" firstAttribute="top" secondItem="w8K-oz-Scp" secondAttribute="bottom" constant="48" id="GmS-4g-jXW"/>
                             <constraint firstItem="G8v-1W-3rj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HTR-7l-nbF"/>
+                            <constraint firstItem="XUZ-OP-eNo" firstAttribute="width" secondItem="NqX-2g-SV9" secondAttribute="width" id="I87-ki-IfU"/>
+                            <constraint firstItem="NqX-2g-SV9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="KEs-Vq-Tcg"/>
                             <constraint firstItem="G8v-1W-3rj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="KLd-st-oRv"/>
                             <constraint firstItem="G8v-1W-3rj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="KaP-pr-dXj"/>
+                            <constraint firstItem="NqX-2g-SV9" firstAttribute="top" secondItem="w8K-oz-Scp" secondAttribute="bottom" constant="48" id="PWa-OR-3VT"/>
                             <constraint firstItem="7gm-Im-TT0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RJu-RQ-HHc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w8K-oz-Scp" secondAttribute="trailing" constant="5" id="YA0-vK-wkK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NqX-2g-SV9" secondAttribute="bottom" constant="48" id="f4B-b9-LPX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XUZ-OP-eNo" secondAttribute="bottom" constant="48" id="fJc-wV-IrK"/>
                             <constraint firstItem="w8K-oz-Scp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="G8v-1W-3rj" secondAttribute="bottom" constant="10" id="mmZ-fg-tUt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XUZ-OP-eNo" secondAttribute="trailing" constant="48" id="nMD-22-GQ1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G8v-1W-3rj" secondAttribute="trailing" constant="5" id="rQj-ha-Vhb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -61,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1006" y="-260"/>
+            <point key="canvasLocation" x="1005.5" y="-261"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="g4l-Cc-HWq">
