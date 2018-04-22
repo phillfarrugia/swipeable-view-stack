@@ -127,23 +127,21 @@ extension SwipeableCardViewContainer {
 
         // Only add a new card if there are cards remaining
         if remainingCards > 0 {
-
             // Calculate new card's index
             let newIndex = dataSource.numberOfCards() - remainingCards
 
             // Add new card as Subview
             addCardView(cardView: dataSource.card(forItemAtIndex: newIndex), atIndex: 2)
+        }
 
-            // Update all existing card's frames based on new indexes, animate frame change
-            // to reveal new card from underneath the stack of existing cards.
-            for (cardIndex, cardView) in visibleCardViews.reversed().enumerated() {
-                UIView.animate(withDuration: 0.2, animations: {
-                    cardView.center = self.center
-                    self.setFrame(forCardView: cardView, atIndex: cardIndex)
-                    self.layoutIfNeeded()
-                })
-            }
-
+        // Update all existing card's frames based on new indexes, animate frame change
+        // to reveal new card from underneath the stack of existing cards.
+        for (cardIndex, cardView) in visibleCardViews.reversed().enumerated() {
+            UIView.animate(withDuration: 0.2, animations: {
+                cardView.center = self.center
+                self.setFrame(forCardView: cardView, atIndex: cardIndex)
+                self.layoutIfNeeded()
+            })
         }
     }
 

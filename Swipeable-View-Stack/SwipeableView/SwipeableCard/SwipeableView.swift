@@ -133,9 +133,9 @@ class SwipeableView: UIView {
         } else {
             let centerDistance = swipePoint.distanceTo(.zero)
             let targetLine = (swipePoint, CGPoint.zero)
-
+            // print("WHAT")
             return rect.perimeterLines
-                .flatMap { CGPoint.intersectionBetweenLines(targetLine, line2: $0) }
+                .compactMap { CGPoint.intersectionBetweenLines(targetLine, line2: $0) }
                 .map { centerDistance / $0.distanceTo(.zero) }
                 .min() ?? 0.0
         }
@@ -148,8 +148,10 @@ class SwipeableView: UIView {
             translationAnimation?.fromValue = NSValue(cgPoint: POPLayerGetTranslationXY(layer))
             translationAnimation?.toValue = NSValue(cgPoint: animationPointForDirection(dragDirection))
             layer.pop_add(translationAnimation, forKey: "swipeTranslationAnimation")
+            print("REMOVED")
             self.delegate?.didEndSwipe(onView: self)
         } else {
+            print("RESET")
             resetCardViewPosition()
         }
     }
