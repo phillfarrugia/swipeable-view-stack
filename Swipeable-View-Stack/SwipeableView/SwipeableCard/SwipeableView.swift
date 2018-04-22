@@ -30,8 +30,8 @@ class SwipeableView: UIView {
     static var animationDirectionY: CGFloat = 1.0
 
     static var swipePercentageMargin: CGFloat = 0.6
-
-    // MARK: Card Finalize Swipe Animation
+    
+    static var autoSwipeActionAnimationDuration: TimeInterval = 0.3
 
     static var finalizeSwipeActionAnimationDuration: TimeInterval = 0.8
 
@@ -54,6 +54,10 @@ class SwipeableView: UIView {
     }
 
     deinit {
+        removeGestures()
+    }
+    
+    private func removeGestures(){
         if let panGestureRecognizer = panGestureRecognizer {
             removeGestureRecognizer(panGestureRecognizer)
         }
@@ -133,9 +137,8 @@ class SwipeableView: UIView {
         } else {
             let centerDistance = swipePoint.distanceTo(.zero)
             let targetLine = (swipePoint, CGPoint.zero)
-
             return rect.perimeterLines
-                .flatMap { CGPoint.intersectionBetweenLines(targetLine, line2: $0) }
+                .compactMap { CGPoint.intersectionBetweenLines(targetLine, line2: $0) }
                 .map { centerDistance / $0.distanceTo(.zero) }
                 .min() ?? 0.0
         }
@@ -148,7 +151,7 @@ class SwipeableView: UIView {
             translationAnimation?.fromValue = NSValue(cgPoint: POPLayerGetTranslationXY(layer))
             translationAnimation?.toValue = NSValue(cgPoint: animationPointForDirection(dragDirection))
             layer.pop_add(translationAnimation, forKey: "swipeTranslationAnimation")
-            self.delegate?.didEndSwipe(onView: self)
+            self.delegate?.didEndSwipe(onView: self, direction: dragDirection)
         } else {
             resetCardViewPosition()
         }
@@ -182,7 +185,7 @@ class SwipeableView: UIView {
         resetRotationAnimation?.duration = SwipeableView.cardViewResetAnimationDuration
         layer.pop_add(resetRotationAnimation, forKey: "resetRotationAnimation")
     }
-
+    
     private func removeAnimations() {
         pop_removeAllAnimations()
         layer.pop_removeAllAnimations()
@@ -193,5 +196,21 @@ class SwipeableView: UIView {
     @objc private func tapRecognized(_ recognizer: UITapGestureRecognizer) {
         delegate?.didTap(view: self)
     }
-
+    
+    
+    // programatically swipe the card off the screen in a certain direction
+    func autoSwipe(direction: SwipeDirection) {
+        removeAnimations()
+        removeGestures()
+        
+        let translationAnimation = POPBasicAnimation(propertyNamed: kPOPLayerTranslationXY)
+        translationAnimation?.duration = SwipeableView.autoSwipeActionAnimationDuration
+        translationAnimation?.fromValue = NSValue(cgPoint: POPLayerGetTranslationXY(layer))
+        translationAnimation?.toValue = NSValue(cgPoint: animationPointForDirection(direction))
+        translationAnimation?.completionBlock = { _, _ in
+            self.removeFromSuperview()
+        }
+        layer.pop_add(translationAnimation, forKey: "swipeTranslationAnimation")
+        self.delegate?.didAutoSwipe(onView: self, direction: direction)
+    }
 }

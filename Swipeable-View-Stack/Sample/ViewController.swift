@@ -8,21 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController, SwipeableCardViewDataSource {
+class ViewController: UIViewController {
 
     @IBOutlet private weak var swipeableCardView: SwipeableCardViewContainer!
+
+    @IBAction func SwipeRightButton(_ sender: Any) {
+        swipeableCardView.autoSwipe(direction: SwipeDirection.right)
+    }
+    
+    @IBAction func SwipeLeftButton(_ sender: Any) {
+        swipeableCardView.autoSwipe(direction: SwipeDirection.left)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         swipeableCardView.dataSource = self
+        swipeableCardView.delegate = self
     }
 
 }
 
 // MARK: - SwipeableCardViewDataSource
 
-extension ViewController {
+extension ViewController : SwipeableCardViewDataSource {
 
     func numberOfCards() -> Int {
         return viewModels.count
@@ -37,6 +46,17 @@ extension ViewController {
 
     func viewForEmptyCards() -> UIView? {
         return nil
+    }
+}
+
+extension ViewController : SwipeableCardViewDelegate {
+
+    func didSwipe(card: SwipeableCardViewCard, direction: SwipeDirection, atIndex index: Int) {
+        print("Swiped Card \(index) to the \(direction)")
+    }
+    
+    func didSelect(card: SwipeableCardViewCard, atIndex index: Int) {
+        print("Selected Card \(index)")
     }
 
 }
@@ -75,7 +95,9 @@ extension ViewController {
                                                   color: UIColor(red:0.83, green:0.82, blue:0.69, alpha:1.0),
                                                   image: #imageLiteral(resourceName: "clown"))
 
-        return [hamburger, panda, puppy, poop, robot, clown]
+        return [hamburger, panda, puppy, poop, robot, clown,
+                hamburger, panda, puppy, poop, robot, clown,
+                hamburger, panda, puppy, poop, robot, clown]
     }
 
 }

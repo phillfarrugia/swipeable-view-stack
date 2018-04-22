@@ -38,6 +38,15 @@ class SwipeableCardViewContainer: UIView, SwipeableViewDelegate {
         backgroundColor = .clear
         translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    func autoSwipe(direction: SwipeDirection) {
+        if visibleCardViews.count == 0 {
+            return
+        }
+        
+        let cardView = (visibleCardViews.reversed()[0])
+        cardView.autoSwipe(direction: direction)
+    }
 
     /// Reloads the data used to layout card views in the
     /// card stack. Removes all existing card views and
@@ -105,7 +114,7 @@ class SwipeableCardViewContainer: UIView, SwipeableViewDelegate {
 // MARK: - SwipeableViewDelegate
 
 extension SwipeableCardViewContainer {
-
+    
     func didTap(view: SwipeableView) {
         if let cardView = view as? SwipeableCardViewCard,
             let index = cardViews.index(of: cardView) {
@@ -116,35 +125,57 @@ extension SwipeableCardViewContainer {
     func didBeginSwipe(onView view: SwipeableView) {
         // React to Swipe Began?
     }
+    
+    func didAutoSwipe(onView view: SwipeableView, direction: SwipeDirection) {
+        // call back for when a card is swiped away in any direction
+        if let cardView = view as? SwipeableCardViewCard,
+            let index = cardViews.index(of: cardView) {
+            delegate?.didSwipe(card: cardView, direction: direction, atIndex: index)
+        }
+        
+        updateCards()
+    }
 
-    func didEndSwipe(onView view: SwipeableView) {
-        guard let dataSource = dataSource else {
+    func didEndSwipe(onView view: SwipeableView, direction: SwipeDirection) {
+        // call back for when a card is swiped away in any direction
+        if let cardView = view as? SwipeableCardViewCard,
+            let index = cardViews.index(of: cardView) {
+            delegate?.didSwipe(card: cardView, direction: direction, atIndex: index)
+        }
+        
+        guard dataSource != nil else {
             return
         }
-
+        
         // Remove swiped card
         view.removeFromSuperview()
 
+        updateCards()
+    }
+    
+    // update remaining cards
+    func updateCards(){
+        guard let dataSource = dataSource else {
+            return
+        }
+        
         // Only add a new card if there are cards remaining
         if remainingCards > 0 {
-
             // Calculate new card's index
             let newIndex = dataSource.numberOfCards() - remainingCards
-
+            
             // Add new card as Subview
             addCardView(cardView: dataSource.card(forItemAtIndex: newIndex), atIndex: 2)
-
-            // Update all existing card's frames based on new indexes, animate frame change
-            // to reveal new card from underneath the stack of existing cards.
-            for (cardIndex, cardView) in visibleCardViews.reversed().enumerated() {
-                UIView.animate(withDuration: 0.2, animations: {
-                    cardView.center = self.center
-                    self.setFrame(forCardView: cardView, atIndex: cardIndex)
-                    self.layoutIfNeeded()
-                })
-            }
-
+        }
+        
+        // Update all existing card's frames based on new indexes, animate frame change
+        // to reveal new card from underneath the stack of existing cards.
+        for (cardIndex, cardView) in visibleCardViews.reversed().enumerated() {
+            UIView.animate(withDuration: 0.2, animations: {
+                cardView.center = self.center
+                self.setFrame(forCardView: cardView, atIndex: cardIndex)
+                self.layoutIfNeeded()
+            })
         }
     }
-
 }
