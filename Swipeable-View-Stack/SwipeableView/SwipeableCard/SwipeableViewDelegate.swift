@@ -13,7 +13,8 @@ protocol SwipeableViewDelegate: class {
     func didTap(view: SwipeableView)
 
     func didBeginSwipe(onView view: SwipeableView)
-
-    func didEndSwipe(onView view: SwipeableView)
-
+    
+    func didEndSwipe(onView view: SwipeableView, direction: SwipeDirection)
+    
+    func didAutoSwipe(onView view: SwipeableView, direction: SwipeDirection)
 }
