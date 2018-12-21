@@ -19,8 +19,8 @@ class SampleSwipeableCard: SwipeableCardViewCard {
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var backgroundContainerView: UIView!
 
-    /// Core Motion Manager
-    private let motionManager = CMMotionManager()
+    /// Core Motion Manager - removing the coremotion mangaer fixes several UI Thread checker erros on ios 12 + with the xs xr and xs max
+    //private let motionManager = CMMotionManager()
 
     /// Shadow View
     private weak var shadowView: UIView?
